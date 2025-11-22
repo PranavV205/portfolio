@@ -1,26 +1,59 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:where(.dark, .dark *));
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 98%;
+    --foreground: 240 10% 3.9%;
+    --grid-line: 240 5.9% 90%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --grid-line: 240 3.7% 15.9%;
+  }
+
+  body {
+    @apply bg-[hsl(var(--background))] text-[hsl(var(--foreground))];
+  }
+
+  * {
+    border-color: hsl(var(--grid-line));
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(0deg);
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  .grid-bg {
+    background-color: transparent;
+    background-image:
+      linear-gradient(hsl(var(--grid-line) / 0.5) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--grid-line) / 0.5) 1px, transparent 1px);
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: 4.5rem 4.5rem;
+  }
+
+  .grid-overlay {
+    pointer-events: none;
+  }
 }

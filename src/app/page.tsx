@@ -1,65 +1,68 @@
-import Image from "next/image";
+import { WorkExperience } from "@/components/Experience";
+import Header from "@/components/Header";
+import { DiJsBadge } from "react-icons/di";
+import { FaDatabase } from "react-icons/fa";
+import { SiReact } from "react-icons/si";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="min-h-screen">
+
+      <div className="fixed inset-0 grid-bg grid-overlay z-0" aria-hidden="true" />
+
+
+      <section className="relative min-h-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 justify-center items-center">
+
+        <div className="absolute top-[15%] left-[18%] z-10">
+          <div className="animate-float">
+            <SiReact style={{ width: '3.7rem', height: '3.7rem' }} className="text-gray-300 dark:text-gray-800" />
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="absolute bottom-[40%] right-[12%] z-10">
+          <div className="animate-float">
+            <FaDatabase style={{ width: '3.2rem', height: '3.2rem' }} className="text-gray-300 dark:text-gray-800" />
+          </div>
         </div>
-      </main>
+
+        <div className="absolute bottom-[20%] left-[12%] z-10">
+          <div className="animate-float">
+            <DiJsBadge style={{ width: '3.5rem', height: '3.5rem' }} className="text-gray-300 dark:text-gray-800" />
+          </div>
+        </div>
+
+
+
+        <div className="relative z-20 flex h-screen">
+          <div className="w-full max-w-3xl mx-auto text-center sm:text-left flex justify-center items-center flex-col">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4">
+              Hey, I'm{" "}
+              <span className="relative inline-block">
+                Pranav
+                <span className="absolute -bottom-1 left-0 w-full h-3 bg-yellow-200 -z-10 -skew-y-1 md:h-4" />
+              </span>
+            </h1>
+
+            <p className="text-lg md:text-2xl text-black/70 dark:text-gray-500 mb-6 sm:mb-8">
+              Software Engineer & Full-Stack Developer
+            </p>
+
+            <div className="flex flex-row gap-4 md:gap-6 justify-center sm:justify-start">
+              <button className="px-6 md:px-8 py-2 md:py-3 text-xl cursor-pointer transition-colors rounded-full  duration-300 text-black bg-white border border-black hover:text-white hover:bg-black/80 dark:bg-transparent dark:text-white dark:border dark:border-white dark:hover:bg-white dark:hover:text-black">
+                Get in touch
+              </button>
+              <button className="px-6 md:px-8 py-2 md:py-3 text-xl cursor-pointer transition-colors rounded-full duration-300 bg-black text-white hover:bg-black/80 dark:bg-white dark:text-black dark:hover:bg-white/80">
+                Proof of work
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <div className="relative z-40 bg-gray-100 dark:bg-gray-900">
+        <WorkExperience />
+      </div>
     </div>
   );
 }
