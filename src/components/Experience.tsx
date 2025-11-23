@@ -31,7 +31,7 @@ export function WorkExperience() {
     return (
         <div className="w-full max-w-4xl mx-auto p-6 text-zinc-100 rounded-xl font-sans selection:bg-white/20">
             <div className="flex items-center gap-4 mb-6">
-                <h2 className="text-2xl text-black">Work Experience</h2>
+                <h2 className="text-2xl text-black dark:text-white">Work Experience</h2>
             </div>
 
             <div className="flex flex-col gap-12">
@@ -51,7 +51,7 @@ export function WorkExperience() {
                         <div className="grow pt-1">
                             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
                                 <div className="flex items-center gap-3">
-                                    <h3 className="text-lg font-semibold text-black">{job.company}</h3>
+                                    <h3 className="text-lg font-semibold text-black dark:text-white">{job.company}</h3>
                                     <span className="rounded-full bg-zinc-800 px-2.5 py-0.5 text-[10px] font-medium text-zinc-400 border border-zinc-700/50">
                                         {job.type}
                                     </span>
@@ -66,12 +66,12 @@ export function WorkExperience() {
                                 </div>
                             </div>
 
-                            <div className="text-base font-medium text-zinc-300 mb-4">{job.role}</div>
+                            <div className="text-base font-medium text-zinc-600 dark:text-zinc-400 mb-4">{job.role}</div>
 
                             <ul className="space-y-3">
                                 {job.description.map((item, i) => (
                                     <li key={i} className="flex items-start gap-3 text-sm text-zinc-400 leading-relaxed">
-                                        <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-zinc-600" />
+                                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-600" />
                                         <span>{item}</span>
                                     </li>
                                 ))}

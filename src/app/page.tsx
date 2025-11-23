@@ -1,5 +1,7 @@
 import { WorkExperience } from "@/components/Experience";
-import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import Projects from "@/components/Projects";
+import TechStack from "@/components/TechStack";
 import { DiJsBadge } from "react-icons/di";
 import { FaDatabase } from "react-icons/fa";
 import { SiReact } from "react-icons/si";
@@ -10,8 +12,7 @@ export default function Home() {
 
       <div className="fixed inset-0 grid-bg grid-overlay z-0" aria-hidden="true" />
 
-
-      <section className="relative min-h-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 justify-center items-center">
+      <main className="relative min-h-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 justify-center items-center">
 
         <div className="absolute top-[15%] left-[18%] z-10">
           <div className="animate-float">
@@ -30,8 +31,6 @@ export default function Home() {
             <DiJsBadge style={{ width: '3.5rem', height: '3.5rem' }} className="text-gray-300 dark:text-gray-800" />
           </div>
         </div>
-
-
 
         <div className="relative z-20 flex h-screen">
           <div className="w-full max-w-3xl mx-auto text-center sm:text-left flex justify-center items-center flex-col">
@@ -58,10 +57,24 @@ export default function Home() {
           </div>
         </div>
 
-      </section>
+      </main>
 
-      <div className="relative z-40 bg-gray-100 dark:bg-gray-900">
-        <WorkExperience />
+      <div>
+        <div id="experience" className="relative z-40 bg-gray-100 dark:bg-[#2b2b2b] py-12">
+          <WorkExperience />
+        </div>
+
+        <div id="projects" className="relative z-40 bg-[#fafafa] dark:bg-black py-12">
+          <Projects />
+        </div>
+
+        <div id="skills" className="relative z-40 bg-gray-100 dark:bg-[#2b2b2b] py-12">
+          <TechStack />
+        </div>
+
+        <div className="relative z-40 bg-[#fafafa] dark:bg-black py-12">
+          <Footer />
+        </div>
       </div>
     </div>
   );
