@@ -21,7 +21,8 @@ const jobs: JobEntry[] = [
         period: "Dec 2024 - Dec 2025",
         location: "Pune, India",
         description: [
-            "Some points"
+            "Spearheaded the end-to-end development of a full-stack e-commerce mobile app using React Native, including authentication and backend integration, as the sole developer in a startup environment.",
+            "Leading a team of 3 developers to build a scalable learning ecosystem, comprising a project management system and a placement tracking application, with a focus on product architecture and delivery."
         ],
         isCurrent: true,
     },
