@@ -2,6 +2,7 @@ import { WorkExperience } from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Projects from "@/components/Projects";
 import TechStack from "@/components/TechStack";
+import Link from "next/link";
 import { DiJsBadge } from "react-icons/di";
 import { FaDatabase } from "react-icons/fa";
 import { SiReact } from "react-icons/si";
@@ -47,12 +48,12 @@ export default function Home() {
             </p>
 
             <div className="flex flex-row gap-4 md:gap-6 justify-center sm:justify-start">
-              <button className="px-6 md:px-8 py-2 md:py-3 text-xl cursor-pointer transition-colors rounded-full  duration-300 text-black bg-white border border-black hover:text-white hover:bg-black/80 dark:bg-transparent dark:text-white dark:border dark:border-white dark:hover:bg-white dark:hover:text-black">
+              <Link href="#footer" className="px-6 md:px-8 py-2 md:py-3 text-xl cursor-pointer transition-colors rounded-full  duration-300 text-black bg-white border border-black hover:text-white hover:bg-black/80 dark:bg-transparent dark:text-white dark:border dark:border-white dark:hover:bg-white dark:hover:text-black">
                 Get in touch
-              </button>
-              <button className="px-6 md:px-8 py-2 md:py-3 text-xl cursor-pointer transition-colors rounded-full duration-300 bg-black text-white hover:bg-black/80 dark:bg-white dark:text-black dark:hover:bg-white/80">
+              </Link>
+              <Link href="#projects" className="px-6 md:px-8 py-2 md:py-3 text-xl cursor-pointer transition-colors rounded-full duration-300 bg-black text-white hover:bg-black/80 dark:bg-white dark:text-black dark:hover:bg-white/80">
                 Proof of work
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -72,7 +73,7 @@ export default function Home() {
           <TechStack />
         </div>
 
-        <div className="relative z-40 bg-[#fafafa] dark:bg-black py-12">
+        <div id="footer" className="relative z-40 bg-[#fafafa] dark:bg-black py-12">
           <Footer />
         </div>
       </div>
