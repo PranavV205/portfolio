@@ -1,4 +1,4 @@
-import { SiNestjs, SiNextdotjs, SiNodedotjs, SiPostgresql, SiReact, SiSupabase, SiTailwindcss, SiTypescript } from "react-icons/si"
+import { SiCss3, SiExpress, SiGithub, SiHtml5, SiJavascript, SiNestjs, SiNextdotjs, SiNodedotjs, SiPostgresql, SiPostman, SiPrisma, SiReact, SiSupabase, SiTailwindcss, SiTypeorm, SiTypescript } from "react-icons/si"
 
 
 function TechStack() {
@@ -8,10 +8,17 @@ function TechStack() {
         { name: "Next.js", icon: SiNextdotjs },
         { name: "Tailwind CSS", icon: SiTailwindcss },
         { name: "TypeScript", icon: SiTypescript },
+        { name: "Javascript", icon: SiJavascript },
         { name: "Node.js", icon: SiNodedotjs },
+        { name: "Express.js", icon: SiExpress },
         { name: "Nest.js", icon: SiNestjs },
         { name: "PostgreSQL", icon: SiPostgresql },
         { name: "Supabase", icon: SiSupabase },
+        { name: "HTML5", icon: SiHtml5 },
+        { name: "CSS3", icon: SiCss3 },
+        { name: "GitHub", icon: SiGithub },
+        { name: "Postman", icon: SiPostman },
+        { name: "Prisma", icon: SiPrisma },
     ]
 
     return (
